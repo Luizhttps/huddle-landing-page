@@ -1,0 +1,86 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Violet-bg: rgba(42, 0, 75, 0.425);
+}
+body{
+    background:  var(--Violet);
+    background-image: url(./images/bg-mobile.svg);
+    background-position-y: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    orientation: portrait;
+}
+
+.header-logo{ position: relative; top: 30px; left: 10px;}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.box1, .box2{font-family: 'Poppins', sans-serif; color: aliceblue;}
+.box1{font-weight: 700; letter-spacing: -1px;}
+.box2{font-weight: 300; font-size: 20px;}
+
+.box3 button{
+    border: 0;
+    width: 200px;
+    height: 60px;
+    color: var(--Violet);
+    font-size: 16px;
+    margin-bottom: 10%;
+    border-radius: 40pt;
+    background-color: aliceblue;
+    box-shadow: 0px 8px 15px var(--Violet-bg);
+}
+.box3 button:active{
+    background-color: var(--Soft-Magenta);
+    color: aliceblue;
+}
+
+.social-media{
+    flex-direction: row;
+}
+.social-media svg{
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    margin: 10px;
+}
+.social-media svg:active {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
+
+@media (min-width: 768px){
+    body{ background-image: url(./images/bg-desktop.svg); }
+    .container{
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2%;
+    }
+    .container-left{
+        width: 60%;
+        margin-left: 2%;
+    }
+    .container-right{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        margin-right: 4%;
+    }
+    .box1 {font-size: 24px;}
+    .social-media{position:relative; top: 100px; left: 170px;}
+}
